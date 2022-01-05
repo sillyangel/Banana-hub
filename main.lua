@@ -21,7 +21,8 @@ if game.PlaceId == 155615604 then
         game.Players.LocalPlayer.Character.Humanoid.JumpPower = v
     end)
 
-
+else
+    print("this is not a sppored game")
 end
 
 
