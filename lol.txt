@@ -1,1 +1,1 @@
-loadstring(game:HttpGet("https://raw.githubusercontent.com/"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/banana-nana/Banana-hub/main/main.lua"))()
