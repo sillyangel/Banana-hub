@@ -13,7 +13,7 @@ if game.PlaceId == 155615604 then
     MainS:NewDropdown("Gun Mod", "makes the gun op", {"M9", "Remington 870", "AK-47"}, function(v)
         local module = nil
         if game:GetService("Players").LocalPlayer.Backpack:FindFirstChild(v) then
-            module = require(game:GetService("Players").LocalPlayer.Backpack[v].FindFirstChild(v).GunStates)
+            module = require(game:GetService("Players").LocalPlayer.Backpack[v].GunStates)
         elseif game:GetService("Players").LocalPlayer.Character:FindFirstChild(v) then
             module = require(game:GetService("Players").LocalPlayer.Character[v].GunStates)   
         end
@@ -37,6 +37,12 @@ if game.PlaceId == 155615604 then
     end)
     PlayerS:NewSlider("JumpPower", "Changes The JumpPower", 250, 0, function(v) -- 500 (MaxValue) | 0 (MinValue)
         game.Players.LocalPlayer.Character.Humanoid.JumpPower = v
+    end)
+
+    local Setting = Window:NewTab("Settings")
+    local SettingS = Setting:NewSection("Settings")
+    SettingS:NewKeybind("KeyBind", "To Hide", Enum.KeyCode.P, function()
+        Library:ToggleUI()
     end)
 
 else
