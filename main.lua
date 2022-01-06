@@ -137,7 +137,7 @@ local Creater = "Banana-nana on github"
 
 
 game.StarterGui:SetCore("SendNotification", {
-  Title = "Banana Hub Beta 5";
+  Title = "Banana Hub Beta 7";
   Text = "thanks 4 using it";
   Button1 = "Done";
   Duration = "4";
