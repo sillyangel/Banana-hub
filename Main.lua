@@ -86,6 +86,39 @@ if game.PlaceId == 13822889 then
         game.Players.LocalPlayer.Character.Humanoid.JumpPower = v
     end)
 
+
+
+    PlayerS:NewToggle("Water Soild", "True or false State ment", function(state)
+        if state then
+            local value = true
+            game:GetService("Workpace").Bridge.VerticalLiftBridge.WaterModel.Water.CanCollide = value
+            game:GetService("Workspace").Water.CanCollide = value
+        else
+           local value = false
+           game:GetService("Workpace").Bridge.VerticalLiftBridge.WaterModel.Water.CanCollide = value
+           game:GetService("Workspace").Water.CanCollide = value
+        end
+    end)
+    PlayerS:NewButton("All Blue Prints", "Gives all bluepritns", function()
+        for _,v in pairs(game:GetService("ReplicatedStorage").Purchasables.Structures.BlueprintStructures:GetChildren()) do
+            if game:GetService("Players").LocalPlayer.PlayerBlueprints.Blueprints:FindFirstChild(v.Name) == nil then
+                local folder = Instance.new("Folder", game:GetService("Players").LocalPlayer.PlayerBlueprints.Blueprints)
+                folder.Name = v.Name
+                local category = Instance.new("StringValue", folder)
+                category.Name = "ItemCategory"
+                category.Value = v.ItemCategory.Value
+            end
+        end
+    end)
+
+
+
+
+
+
+
+
+
     local Dupe = Window:NewTab("Dupes")
     local Dupes = Dupe:NewSection("Dupes")
 
@@ -97,6 +130,11 @@ if game.PlaceId == 13822889 then
       SettingS:NewKeybind("KeyBind", "To Hide", Enum.KeyCode.P, function()
         Library:ToggleUI()
       end)  
+
+
+
+
+
 
       print("Check Point 2")
 end
@@ -119,6 +157,8 @@ function NotSupported()
         game.Players.LocalPlayer.Character.Humanoid.JumpPower = v
     end)
 
+
+
     	local Setting = Window:NewTab("Settings")
       local SettingS = Setting:NewSection("Settings")
 
@@ -137,7 +177,7 @@ local Creater = "Banana-nana on github"
 
 
 game.StarterGui:SetCore("SendNotification", {
-  Title = "Banana Hub Beta 7";
+  Title = "Banana Hub Beta 9";
   Text = "thanks 4 using it";
   Button1 = "Done";
   Duration = "4";
