@@ -1,3 +1,14 @@
+-- Thank you for using  banana hub
+-- Github banana-nana
+
+
+
+
+
+
+
+
+
 if game.PlaceId == 155615604 then
     local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
     local Window = Library.CreateLib("Prison Life", "Midnight")
@@ -13,7 +24,7 @@ if game.PlaceId == 155615604 then
     MainS:NewDropdown("Gun Mod", "makes the gun op", {"M9", "Remington 870", "AK-47"}, function(v)
         local module = nil
         if game:GetService("Players").LocalPlayer.Backpack:FindFirstChild(v) then
-            module = require(game:GetService("Players").LocalPlayer.Backpack[v].GunStates)
+            module = require(game:GetService("Players").LocalPlayer.Backpack[v].FindFirstChild(v).GunStates)
         elseif game:GetService("Players").LocalPlayer.Character:FindFirstChild(v) then
             module = require(game:GetService("Players").LocalPlayer.Character[v].GunStates)   
         end
@@ -39,14 +50,17 @@ if game.PlaceId == 155615604 then
         game.Players.LocalPlayer.Character.Humanoid.JumpPower = v
     end)
 
-    local Setting = Window:NewTab("Settings")
-    local SettingS = Setting:NewSection("Settings")
-    SettingS:NewKeybind("KeyBind", "To Hide", Enum.KeyCode.P, function()
-        Library:ToggleUI()
-    end)
+    	local Setting = Window:NewTab("Settings")
+      local SettingS = Setting:NewSection("Settings")
 
-else
-    print("This game is not Supported")
+      SettingS:NewKeybind("KeyBind", "To Hide", Enum.KeyCode.P, function()
+          Library:ToggleUI()
+      end)
+
+print("Check Point 1 ")
+      
+      
+
 end
 
 
@@ -55,3 +69,78 @@ end
 
 
 
+if game.PlaceId == 13822889 then
+
+    local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+    local Window = Library.CreateLib("Lumber Tycoon 2", "Midnight")
+    
+
+    
+    local Player = Window:NewTab("Player")
+    local PlayerS = Player:NewSection("Player")
+
+    PlayerS:NewSlider("WalkSpeed", "Changes The Speed", 250, 0, function(v) -- 500 (MaxValue) | 0 (MinValue)
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = v
+    end)
+    PlayerS:NewSlider("JumpPower", "Changes The JumpPower", 250, 0, function(v) -- 500 (MaxValue) | 0 (MinValue)
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = v
+    end)
+
+    local Dupe = Window:NewTab("Dupes")
+    local Dupes = Dupe:NewSection("Dupes")
+
+
+
+    	local Setting = Window:NewTab("Settings")
+      local SettingS = Setting:NewSection("Settings")
+
+      SettingS:NewKeybind("KeyBind", "To Hide", Enum.KeyCode.P, function()
+        Library:ToggleUI()
+      end)  
+
+      print("Check Point 2")
+end
+
+
+
+function NotSupported()
+      local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+    local Window = Library.CreateLib("Unknow Game", "Midnight")
+    
+
+    
+    local Player = Window:NewTab("Player")
+    local PlayerS = Player:NewSection("Player")
+
+    PlayerS:NewSlider("WalkSpeed", "Changes The Speed", 250, 0, function(v) -- 500 (MaxValue) | 0 (MinValue)
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = v
+    end)
+    PlayerS:NewSlider("JumpPower", "Changes The JumpPower", 250, 0, function(v) -- 500 (MaxValue) | 0 (MinValue)
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = v
+    end)
+
+    	local Setting = Window:NewTab("Settings")
+      local SettingS = Setting:NewSection("Settings")
+
+      SettingS:NewKeybind("KeyBind", "To Hide", Enum.KeyCode.P, function()
+        Library:ToggleUI()
+      end)  
+
+    
+end
+
+
+
+local Creater = "Banana-nana on github"
+
+
+
+
+game.StarterGui:SetCore("SendNotification", {
+  Title = "Banana Hub Beta 5";
+  Text = "thanks 4 using it";
+  Button1 = "Done";
+  Duration = "4";
+})
+
+print("Last CheckPoint")
