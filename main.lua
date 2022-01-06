@@ -24,7 +24,7 @@ if game.PlaceId == 155615604 then
     MainS:NewDropdown("Gun Mod", "makes the gun op", {"M9", "Remington 870", "AK-47"}, function(v)
         local module = nil
         if game:GetService("Players").LocalPlayer.Backpack:FindFirstChild(v) then
-            module = require(game:GetService("Players").LocalPlayer.Backpack[v].FindFirstChild(v).GunStates)
+            module = require(game:GetService("Players").LocalPlayer.Backpack[v].GunStates)
         elseif game:GetService("Players").LocalPlayer.Character:FindFirstChild(v) then
             module = require(game:GetService("Players").LocalPlayer.Character[v].GunStates)   
         end
