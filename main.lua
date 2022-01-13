@@ -88,7 +88,7 @@ if game.PlaceId == 13822889 then
 
 
 
-    PlayerS:NewToggle("Water Soild", "True or false State ment", function(state)
+    PlayerS:NewToggle("Water Soild", "If you want ", function(state)
         if state then
             local value = true
             game:GetService("Workpace").Bridge.VerticalLiftBridge.WaterModel.Water.CanCollide = value
@@ -177,7 +177,7 @@ local Creater = "Banana-nana on github"
 
 
 game.StarterGui:SetCore("SendNotification", {
-  Title = "Banana Hub Beta 9";
+  Title = "Banana Hub v1";
   Text = "thanks 4 using it";
   Button1 = "Done";
   Duration = "4";
