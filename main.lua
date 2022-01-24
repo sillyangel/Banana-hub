@@ -3,14 +3,14 @@
 
 
 
+local SUPPORTED = 0
 
-
--- 
+-- Games
 
 
 
 if game.PlaceId == 155615604 then
-    
+    loadstring(game:HttpGet("http://raw.githubusercontent.com/banana-nana/Banana-hub/main/src/Prisonlife.lua"))()
 end
 
 
@@ -20,14 +20,21 @@ end
 
 
 if game.PlaceId == 13822889 then
-    
+    loadstring(game:HttpGet("http://raw.githubusercontent.com/banana-nana/Banana-hub/main/src/LumberTycoon.lua"))()
 end
+
 
 if game.PlaceId == then
-    
+    loadstring(game:HttpGet("http://raw.githubusercontent.com/banan-nana/Banana-hub/main/src/"))()
 end
 
 
+
+-- IF NOT SUPPORTED
+
+
+
+if SUPPORTED == 0 then
       local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
     local Window = Library.CreateLib("Unknow Game", "Midnight")
     
@@ -53,7 +60,7 @@ end
       end)  
     
     
-
+end
     
     game.StarterGui:SetCore("SendNotification", {
   Title = "Banana Hub";
