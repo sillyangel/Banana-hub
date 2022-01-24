@@ -5,7 +5,7 @@
 
 
 
-
+-- 
 
 
 
@@ -165,8 +165,16 @@ function NotSupported()
       SettingS:NewKeybind("KeyBind", "To Hide", Enum.KeyCode.P, function()
         Library:ToggleUI()
       end)  
+    
+    SettingS:NewTextBox(""
 
     
+    game.StarterGui:SetCore("SendNotification", {
+  Title = "Banana Hub";
+  Text = "Game is not supported";
+  Button1 = "";
+  Duration = "4";
+})
 end
 
 
@@ -174,7 +182,7 @@ end
 local Creater = "Banana-nana on github"
 
 
-
+NotSupported()
 
 game.StarterGui:SetCore("SendNotification", {
   Title = "Banana Hub Beta 9";
