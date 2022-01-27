@@ -44,3 +44,17 @@ local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHept
       SettingS:NewKeybind("KeyBind", "To Hide", Enum.KeyCode.P, function()
           Library:ToggleUI()
       end)
+
+
+      G.SettingTable = {
+        setting1 = false;
+        setting2 = false;
+        setting3 = false;
+    }
+    
+    
+    print("Default-Settings")
+    for i,v in pairs(_G.SettingTable) do 
+        print(i,v)
+    end
+    

@@ -14,16 +14,11 @@ if game.PlaceId == 155615604 then
 end
 
 
-
-
-
-
-
 if game.PlaceId == 13822889 then
     loadstring(game:HttpGet("http://raw.githubusercontent.com/banana-nana/Banana-hub/main/src/LumberTycoon.lua"))()
 end
 
-
+-- Place Holder 
 if game.PlaceId == then
     loadstring(game:HttpGet("http://raw.githubusercontent.com/banan-nana/Banana-hub/main/src/"))()
 end
@@ -63,7 +58,7 @@ if SUPPORTED == 0 then
 end
     
     game.StarterGui:SetCore("SendNotification", {
-  Title = "Banana Hub";
+  Title = "Banana Hub v1";
   Text = "Game is not supported";
   Button1 = "";
   Duration = "4";
