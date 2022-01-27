@@ -72,12 +72,20 @@
         Callback = NotificationBindable;
       })
 
+      function Changelog()
+        game.StarterGui:SetCore("SendNotification", {
+            Title = "Banana Hub v1";
+            Text = "Check Console!";
+            Duration = "4";   
+        })
+    end
 
       local function callback(Text)
-        if Text == "Button1 text" then
-         print ("")
-       elseif Text == ("Button2 text") then
-        print ("")
+        if Text == "ChangeLog" then
+            print("--Changelog--")
+         print ("Added Settings -- Note that Only Level 7 can Save Settings")
+         print("----------- Updated 2022 Jan 27")
+         Changelog()
         end
        end
        
