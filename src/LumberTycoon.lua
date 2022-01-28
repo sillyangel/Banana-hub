@@ -79,33 +79,7 @@
 
       print("LumberTycoon")
 
-      game.StarterGui:SetCore("SendNotification", {
-        Title = "Banana Hub v1";
-        Text = "Yay v1";
-        Button1 = "ChangeLog";
-        Duration = "4";
-        Callback = NotificationBindable;
-      })
-
-      function Changelog()
-        game.StarterGui:SetCore("SendNotification", {
-            Title = "Banana Hub v1";
-            Text = "Check Console!";
-            Duration = "4";   
-        })
-      end
-
-      local function callback(Text)
-        if Text == "ChangeLog" then
-            print("--Changelog--")
-            print ("Added Settings -- Note that Only Level 7 can Save Settings")
-            print("----------- Updated 7122 Jan 27")
-            Changelog()
-         end
-       end
-       
-       local NotificationBindable = Instance.new("BindableFunction")
-       NotificationBindable.OnInvoke = callback
+   
 
 
       local filename = "LumberTycoon_Settings.txt";
