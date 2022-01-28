@@ -6,6 +6,8 @@ How to run Banana-Hub Use Krnl or a Level 7 Thingy
 Then you put this script in.
 
 ```lua
+_G.Key = "Key"
+
 loadstring(game:HttpGet("http://raw.githubusercontent.com/banana-nana/Banana-hub/main/main.lua"))()
 ```
 

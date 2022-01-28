@@ -1,5 +1,5 @@
--- How to get Key _
-G.Key = "Key1"
+
+
 
 local keys = {
     "Banana-nana",
