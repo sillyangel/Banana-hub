@@ -69,6 +69,8 @@
 
 
 
+
+
       print("LumberTycoon")
 
       game.StarterGui:SetCore("SendNotification", {
