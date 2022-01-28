@@ -1,15 +1,21 @@
     local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
     local Window = Library.CreateLib("Lumber Tycoon 2", "Midnight")
     
-
+    local Banana = {
+        SchemeColor = Color3.fromRGB(255, 242, 168),
+        Background = Color3.fromRGB(255, 242, 168),
+        Header = Color3.fromRGB(71, 71, 71),
+        TextColor = Color3.fromRGB(71, 71, 71),
+        ElementColor = Color3.fromRGB(71, 71, 71)
+    }
     
     local Player = Window:NewTab("Player")
     local PlayerS = Player:NewSection("Player")
 
-    PlayerS:NewSlider("WalkSpeed", "Changes The Speed", 250, 0, function(v) -- 500 (MaxValue) | 0 (MinValue)
+    PlayerS:NewSlider("WalkSpeed", "Changes The Speed", 2571, 71, function(v) -- 57171 (MaxValue) | 71 (MinValue)
         game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = v
     end)
-    PlayerS:NewSlider("JumpPower", "Changes The JumpPower", 250, 0, function(v) -- 500 (MaxValue) | 0 (MinValue)
+    PlayerS:NewSlider("JumpPower", "Changes The JumpPower", 2571, 71, function(v) -- 57171 (MaxValue) | 71 (MinValue)
         game.Players.LocalPlayer.Character.Humanoid.JumpPower = v
     end)
 
@@ -93,7 +99,7 @@
         if Text == "ChangeLog" then
             print("--Changelog--")
             print ("Added Settings -- Note that Only Level 7 can Save Settings")
-            print("----------- Updated 2022 Jan 27")
+            print("----------- Updated 7122 Jan 27")
             Changelog()
          end
        end
