@@ -49,8 +49,8 @@
 
 
 
-    	local Setting = Window:NewTab("Settings")
-      local SettingS = Setting:NewSection("Settings")
+    local Setting = Window:NewTab("Settings")
+    local SettingS = Setting:NewSection("Settings")
 
       SettingS:NewKeybind("KeyBind", "To Hide", Enum.KeyCode.P, function()
         Library:ToggleUI()
@@ -78,24 +78,20 @@
             Text = "Check Console!";
             Duration = "4";   
         })
-    end
+      end
 
       local function callback(Text)
         if Text == "ChangeLog" then
             print("--Changelog--")
-         print ("Added Settings -- Note that Only Level 7 can Save Settings")
-         print("----------- Updated 2022 Jan 27")
-         Changelog()
-        end
+            print ("Added Settings -- Note that Only Level 7 can Save Settings")
+            print("----------- Updated 2022 Jan 27")
+            Changelog()
+         end
        end
        
        local NotificationBindable = Instance.new("BindableFunction")
        NotificationBindable.OnInvoke = callback
-       --       game.StarterGui:SetCore("SendNotification",  {        Title = "Title";        Text = "Description";        Icon = "";        Duration = 5;        Button1 = "Button1 text";        Button2 = "Button2 text";       })
 
-
-
-      -- Settings and Functions
 
       local filename = "LumberTycoon_Settings.txt";
 
@@ -103,7 +99,7 @@
 
       G.SettingTable = {
         WaterSoildL = false;
-        setting2 = false;
+        NotificationPlayerAdded = true;
         setting3 = false;
     }
     
@@ -143,11 +139,24 @@
     function WaterSoild() 
         saveSettings()
         if WaterSoildL == true then 
-            game:GetService("Workpace").Bridge.VerticalLiftBridge.WaterModel.Water.CanCollide = value
-            game:GetService("Workspace").Water.CanCollide = value
+            game:GetService("Workpace").Bridge.VerticalLiftBridge.WaterModel.Water.CanCollide = WaterSoildL
+            game:GetService("Workspace").Water.CanCollide = WaterSoildL
         end
         if WaterSoildL == false then 
-            game:GetService("Workpace").Bridge.VerticalLiftBridge.WaterModel.Water.CanCollide = value
-            game:GetService("Workspace").Water.CanCollide = value
+            game:GetService("Workpace").Bridge.VerticalLiftBridge.WaterModel.Water.CanCollide = WaterSoildL
+            game:GetService("Workspace").Water.CanCollide = WaterSoildL
         end
     end
+
+
+while NotificationPlayerAdded == true do
+    wait(2)
+    
+    game.Players.PlayerAdded:Connect(function())
+        game.StarterGui:SetCore("SendNotification", {
+            Title = "Player Joined - Banana-Hub";
+            Text = player.Name .. " Joined";
+            Duration = "4";   
+        })
+    end
+end
