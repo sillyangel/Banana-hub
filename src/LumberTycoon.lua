@@ -56,7 +56,14 @@
         Library:ToggleUI()
       end)  
 
-
+      SettingS:NewToggle("Notif PlayerAdded", "Sends Notif if Player Join", function(state)
+        if state then
+            _G.SettingTable.NotificationPlayerAdded = state
+        else
+            _G.SettingTable.NotificationPlayerAdded = state
+        end
+        saveSettings()
+      end)    
 
 
 
@@ -152,7 +159,7 @@
 while NotificationPlayerAdded == true do
     wait(2)
     
-    game.Players.PlayerAdded:Connect(function())
+    game.Players.PlayerAdded:Connect(function(player))
         game.StarterGui:SetCore("SendNotification", {
             Title = "Player Joined - Banana-Hub";
             Text = player.Name .. " Joined";
