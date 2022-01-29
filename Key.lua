@@ -1,5 +1,4 @@
-_
-G.Key = "Key1"
+_G.Key = "Key1"
 
 local keys = {
     "Banana-nana",
