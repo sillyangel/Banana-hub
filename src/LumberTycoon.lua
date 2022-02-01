@@ -79,7 +79,7 @@
 
       print("LumberTycoon")
 
-   
+
 
 
       local filename = "LumberTycoon_Settings.txt";
