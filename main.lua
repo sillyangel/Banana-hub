@@ -1,5 +1,3 @@
-
-
         
         if game.PlaceId == 155615604 then
             loadstring(game:HttpGet("http://raw.githubusercontent.com/banana-nana/Banana-hub/main/src/Prisonlife.lua"))()

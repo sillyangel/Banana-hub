@@ -86,7 +86,7 @@
 
 
 
-      G.SettingTable = {
+      _G.SettingTable = {
         WaterSoildL = false;
         NotificationPlayerAdded = true;
         setting3 = false;
