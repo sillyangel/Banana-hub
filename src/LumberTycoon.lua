@@ -1,13 +1,6 @@
     local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
     local Window = Library.CreateLib("Lumber Tycoon 2", "Midnight")
     
-    local Banana = {
-        SchemeColor = Color3.fromRGB(255, 242, 168),
-        Background = Color3.fromRGB(255, 242, 168),
-        Header = Color3.fromRGB(71, 71, 71),
-        TextColor = Color3.fromRGB(71, 71, 71),
-        ElementColor = Color3.fromRGB(71, 71, 71)
-    }
     
     local Player = Window:NewTab("Player")
     local PlayerS = Player:NewSection("Player")
